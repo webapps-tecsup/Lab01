@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab01-Formulario</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Travel Authorization Form</h3>
+      <form action="form.html">
+        <div>
+          <div>
+            <h2>Seccion A: Informacion del cliente</h2>
+            <hr />
+            <div class="subsection1">
+              <p>
+                <label for="cargo" class="label"> Cargo: <span>*</span></label>
+                <input
+                  name="cargo"
+                  id="cargo"
+                  style="text-transform: uppercase"
+                  minlength="4"
+                  maxlength="100"
+                  required
+                />
+              </p>
+              <p>
+                <label for="name" class="label"> Nombre: <span>*</span></label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  style="text-transform: uppercase"
+                  minlength="4"
+                  maxlength="100"
+                  required
+                />
+              </p>
+              <p>
+                <label for="pApellido" class="label">
+                  Primer apellido: <span>*</span></label
+                >
+                <input
+                  type="text"
+                  name="pApellido"
+                  id="pApellido"
+                  style="text-transform: uppercase"
+                  minlength="4"
+                  maxlength="100"
+                  required
+                />
+              </p>
+              <p>
+                <label for="sApellido" class="label">
+                  Segundo apellido: <span>*</span></label
+                >
+                <input
+                  type="text"
+                  name="sApellido"
+                  id="sApellido"
+                  style="text-transform: uppercase"
+                  minlength="4"
+                  maxlength="100"
+                  required
+                />
+              </p>
+              <p>
+                <label for="email" class="label">
+                  Correo electronico: <span>*</span></label
+                >
+                <input type="email" name="email" id="email" required />
+              </p>
+              <p>
+                <label for="telefono" class="label">
+                  Numero de telefono: <span>*</span>
+                </label>
+                <input
+                  type="tel"
+                  name="telefono"
+                  id="telefono"
+                  maxlength="9"
+                  required
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Seccion B: Informacion del viaje</h2>
+          <hr />
+          <div class="subsection2">
+            <div class="box1">
+              <p>
+                <label for="select">Nombre de la aerolinea:</label>
+                <select name="select" id="select">
+                  <option disabled selected>Seleccione una aerolinea</option>
+                  <option value="Viva Air">Viva Air</option>
+                  <option value="Latam">Latam</option>
+                  <option value="Avianca">Avianca</option>
+                  <option value="Avia Express">Avia Express</option>
+                  <option value="Volaris">Volaris</option>
+                </select>
+              </p>
+              <p>
+                <label for="destino"> Destino: <span>*</span></label>
+                <input type="text" name="destino" id="destino" required />
+              </p>
+              <p>
+                <label for="fecha-s">Fecha de salida:</label>
+                <input
+                  type="date"
+                  name="fecha-s"
+                  id="fecha-s"
+                  min="2020-01-01"
+                  required
+                />
+              </p>
+              <p>
+                <label for="fecha-r"> Fecha de regreso:</label>
+                <input
+                  type="date"
+                  name="fecha-r"
+                  id="fecha-r"
+                  min="2020-01-01"
+                  required
+                />
+              </p>
+
+              <p>
+                <label for="nom_aerolinea">
+                  Coste estimado: <span>*</span></label
+                >
+                <input
+                  type="number"
+                  name="aerolinea"
+                  id="nom_aerolinea"
+                  min="100"
+                  max="1000"
+                  required
+                />
+              </p>
+              <div>
+                <p>
+                  <label for="question"> ¿Incluye la visita al cliente?</label>
+                  <input type="checkbox" id="question" />
+                </p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>Gastos adicionales estimados</p>
+                <div class="subsection3">
+                  <p>
+                    <label for="alquiler"> Alquiler de coche</label>
+                    <input type="number" id="alquiler" min="100" max="600" />
+                  </p>
+                  <p>
+                    <label for="hotel"> Hotel</label>
+                    <input type="number" id="hotel" min="100" max="600" />
+                  </p>
+                  <p>
+                    <label for="comidas"> Comidas</label>
+                    <input type="number" id="comidas" min="100" max="600" />
+                  </p>
+                  <p>
+                    <label for="total"> Total estimado</label>
+                    <input
+                      type="number"
+                      id="total"
+                      min="100"
+                      max="1800"
+                      placeholder="0,00 S/."
+                    />
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <p>
+                    <label> Metodo de pago utilizado:</label>
+                  </p>
+                  <div class="subsection4">
+                    <p>
+                      <label for="pagoM">Metalico </label
+                      ><input
+                        type="radio"
+                        name="pago"
+                        id="pagoM"
+                        value="metalico"
+                        required
+                      />
+                    </p>
+                    <p>
+                      <label for="pagoT">Tarjeta de credito</label
+                      ><input
+                        type="radio"
+                        name="pago"
+                        id="pagoT"
+                        value="tarjeta"
+                      />
+                    </p>
+                    <p>
+                      <label for="pagoC">Cheque</label
+                      ><input
+                        type="radio"
+                        name="pago"
+                        id="pagoC"
+                        value="cheque"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="textarea">
+            <label for="comentario">Proposito del viaje:</label>
+            <textarea name="" id="comentario" cols="60" rows="3"></textarea>
+          </div>
+        </div>
+        <input type="submit" class="button" />
+      </form>
+    </div>
+  </body>
+</html>
